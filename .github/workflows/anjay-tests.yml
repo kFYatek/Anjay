@@ -106,7 +106,7 @@ jobs:
             MEM_CHECK_TOOL: --with-valgrind
           - CC: clang-14
             CXX: clang++-14
-            MEM_CHECK_TOOL: --with-asan # NOTE: workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=1758782
+            MEM_CHECK_TOOL: --without-memcheck # NOTE: workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=1758782
 
   fedora36-compilers-test:
     runs-on: ubuntu-latest
