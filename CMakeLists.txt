@@ -802,7 +802,10 @@ if(WITH_FIND_UNUSED_CODE)
     add_dependencies(check find_unused_code)
 endif()
 
-add_subdirectory(examples)
+option(WITH_EXAMPLES "Compile and test examples" ON)
+if(WITH_EXAMPLES)
+    add_subdirectory(examples)
+endif()
 
 ################# INSTALL ######################################################
 
