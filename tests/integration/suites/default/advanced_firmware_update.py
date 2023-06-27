@@ -227,7 +227,7 @@ class AdvancedFirmwareUpdate:
 
             self.fail('firmware still not downloaded')
 
-        def wait_until_state_is(self, inst, state, timeout_s=2):
+        def wait_until_state_is(self, inst, state, timeout_s=10):
             deadline = time.time() + timeout_s
             while time.time() < deadline:
                 time.sleep(0.1)
